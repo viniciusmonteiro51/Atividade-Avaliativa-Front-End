@@ -1,0 +1,96 @@
+{
+    "eventos": [
+      {
+        "id": 1,
+        "titulo": "Independência dos EUA",
+        "descricao": "Os Estados Unidos declaram independência do domínio britânico.",
+        "dataInicio": "1776-07-04",
+        "dataFim": "1776-07-04",
+        "local": "Filadélfia, Pensilvânia, EUA",
+        "imagem": "/independenciaEUA.jpg"
+      },
+      {
+        "id": 2,
+        "titulo": "Revolução Francesa",
+        "descricao": "Início da Revolução Francesa, marcando o fim da monarquia absoluta.",
+        "dataInicio": "1789-07-14",
+        "dataFim": "1799-11-09",
+        "local": "Paris, França",
+        "imagem": "/revolucaofrancesa.jpg"
+      },
+      {
+        "id": 3,
+        "titulo": "Primeira Guerra Mundial",
+        "descricao": "Um conflito global que envolveu as principais potências do mundo.",
+        "dataInicio": "1914-07-28",
+        "dataFim": "1918-11-11",
+        "local": "Vários locais ao redor do mundo",
+        "imagem": "/primeiraguerra.jpg"
+        
+      },
+      {
+        "id": 4,
+        "titulo": "Segunda Guerra Mundial",
+        "descricao": "O conflito mais mortal da história, envolvendo nações de todo o mundo.",
+        "dataInicio": "1939-09-01",
+        "dataFim": "1945-09-02",
+        "local": "Vários locais ao redor do mundo",
+        "imagem":"/segundaguerra.jpg"
+      },
+      {
+        "id": 5,
+        "titulo": "Independência da Índia",
+        "descricao": "A Índia conquista a independência do domínio britânico.",
+        "dataInicio": "1947-08-15",
+        "dataFim": "1947-08-15",
+        "local": "Nova Delhi, Índia",
+        "imagem": "/independenciaINDIA.jpg"
+      },
+      {
+        "id": 6,
+        "titulo": "Queda do Muro de Berlim",
+        "descricao": "O Muro de Berlim, que dividia a Alemanha, é derrubado.",
+        "dataInicio": "1989-11-09",
+        "dataFim": "1989-11-09",
+        "local": "Berlim, Alemanha",
+        "imagem": "/quedamuro.jpg"
+      },
+      {
+        "id": 7,
+        "titulo": "Ataques de 11 de Setembro",
+        "descricao": "Ataques terroristas coordenados nos EUA.",
+        "dataInicio": "2001-09-11",
+        "dataFim": "2001-09-11",
+        "local": "Nova York, EUA",
+        "imagem": "/11setembro.jpg"
+      },
+      {
+        "id": 8,
+        "titulo": "Revolução Chinesa",
+        "descricao": "Estabelecimento da República Popular da China.",
+        "dataInicio": "1949-10-01",
+        "dataFim": "1949-10-01",
+        "local": "Pequim, China",
+        "imagem": "/revolucaochinesa.jpg"
+      },
+      {
+        "id": 9,
+        "titulo": "Aterrissagem na Lua",
+        "descricao": "A missão Apollo 11 pousa na Lua.",
+        "dataInicio": "1969-07-20",
+        "dataFim": "1969-07-20",
+        "local": "Mar da Tranquilidade, Lua",
+        "imagem": "/lua.jpg"
+      },
+      {
+        "id": 10,
+        "titulo": "Revolução Industrial",
+        "descricao": "Início da transição para novos processos de fabricação.",
+        "dataInicio": "1760-1820",
+        "dataFim": "1760-1820",
+        "local": "Reino Unido e posteriormente pelo mundo",
+        "imagem": "/revolucaoindustrial.jpg"
+      }
+    ]
+  }
+  

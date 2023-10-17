@@ -1,0 +1,19 @@
+#Atividade avaliativa individual
+
+Pode gerar o json no Chat-GPT.
+
+Listagem dos eventos em cards na rota / [página inicial]
+=> adicionar imagem na pasta public
+=> adicionar caminho da imagem no json
+
+Detalhe de um eventos /eventos/ID
+- Mostrar mensagem caso o evento não seja encontrado
+
+Formulário para inserir um evento /eventos
+- Mostrar mensagem caso seja inserido com sucesso (verde) ou caso haja algum erro (vermelho)
+
+Formulário para alterar um evento /eventos/alterar/ID
+- Mostrar mensagem caso seja alterado com sucesso (verde) ou caso haja algum erro (vermelho)
+
+Criar todos os componentes:
+-Cabecalho, Rodapé, Card, Lista de Cards, Label, Input, DateTime, Textarea, Button, Mensagem etc...
