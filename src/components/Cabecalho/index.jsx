@@ -1,6 +1,6 @@
 import styles from './styles.module.css'
 
-export default function Cabecalho({children}){
+export default function Cabecalho({}){
     return(
         <>
         <header className={styles.header}>
@@ -10,7 +10,6 @@ export default function Cabecalho({children}){
             <a className={styles.hover} href='/'>Inicio</a>
             <a className={styles.hover} href='/saibamais'>Saiba mais</a>
             </div>
-        {children}
         </header>
         </>
     )

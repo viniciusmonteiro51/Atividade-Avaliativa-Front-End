@@ -1,7 +1,7 @@
 .listCard{
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
     padding: 20px;
     justify-content: center;
 }

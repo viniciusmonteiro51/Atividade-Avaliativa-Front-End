@@ -1,0 +1,21 @@
+.container{
+    background-image: url('/homepage.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+
+.subcontainer h1{
+    margin: 0 60px;
+    max-width: 550px;
+    font-size: 24px;
+    color: white;
+    font-weight: 900;
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    border-radius: 20px;
+    font-family: "Graphik-Regular", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    
+}
