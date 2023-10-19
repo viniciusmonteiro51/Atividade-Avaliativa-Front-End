@@ -12,6 +12,22 @@
     border-radius: 0 0 15px 0;
 }
 
+.cabecalho{
+    display: flex;
+    
+}
+.cabecalho h1{
+    font-size: 30px;
+}
+.cabecalho h2{
+    font-size: 25px;
+    margin-top: 1rem;
+}
+
+.cabecalho h3{
+    margin-top: 2rem;
+    color: black;
+}
 .a{
     margin: 0 20px;
     display: flex;

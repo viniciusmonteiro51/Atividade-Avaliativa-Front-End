@@ -19,3 +19,22 @@
     font-family: "Graphik-Regular", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     
 }
+
+.subcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+@media (max-width: 600px) {
+    .subcontainer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 25px;
+        max-width: 550px;
+    }
+
+  }

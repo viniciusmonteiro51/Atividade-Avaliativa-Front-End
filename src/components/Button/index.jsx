@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 export default function Button({children, ...props}){
     return(
         <>
-        <button className={styles.button} {...props}>{children}</button>
+        <button style={{verticalAlign:'middle'}}className={styles.button} {...props}>{children}</button>
         </>
     )
 }

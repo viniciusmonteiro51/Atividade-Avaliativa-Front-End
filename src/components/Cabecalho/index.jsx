@@ -4,9 +4,13 @@ export default function Cabecalho({}){
     return(
         <>
         <header className={styles.header}>
-            <h1>Portal de Eventos</h1>
+            <div className={styles.cabecalho}>
+            <h1>Portal</h1>
+            <h2>d&</h2>
+            <h3>Eventos</h3>
+            </div>
+
             <div className={styles.a}>
-            <a className={styles.hover} href='/eventos'>Eventos</a>
             <a className={styles.hover} href='/'>Inicio</a>
             <a className={styles.hover} href='/saibamais'>Saiba mais</a>
             </div>
