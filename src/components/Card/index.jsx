@@ -9,18 +9,19 @@ export default function Card({ id, imagem, titulo, descricao, dataInicio, dataFi
                 <div className={styles.card}>
                     <div>
                         <img className={styles.img} src={imagem} />
-                        <h2 className={styles.cardTitulo}>{titulo}</h2>
-                        <div className={styles.subcontainer}>Descrição: {descricao}</div>
-                        <br />
-                        <div>Data de Início: {dataInicio}</div>
-                        <br />
-                        <div>Data de Fim: {dataFim}</div>
-                        <br />
-                        <div>Local: <br /> {local}</div>
-                    <Link href={`/eventos/${id}`}>
-                       <Button className={styles.button}>Saiba mais</Button>
-                    </Link>
-                     
+                        <div className={styles.subcontainer}>
+                            <h2 className={styles.cardTitulo}>{titulo}</h2>
+                            <br />
+                            <div>Data de Início: {dataInicio}</div>
+                            <br />
+                            <div>Data de Fim: {dataFim}</div>
+                            <br />
+                            <div>Local: <br /> {local}</div>
+                        </div>
+                        <Link href={`/eventos/${id}`}>
+                            <Button className={styles.button}>Saiba mais</Button>
+                        </Link>
+
                     </div>
                 </div>
             </div>

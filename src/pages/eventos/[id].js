@@ -1,5 +1,8 @@
 import styles from './styles.module.css'
+import Button from '@/components/Button';
 import { useRouter } from "next/router";
+import Link from 'next/link';
+import Image from 'next/image';
 import axios from "axios";
 import { useEffect, useState } from "react";
 export default function EventosHome() {
@@ -19,22 +22,27 @@ export default function EventosHome() {
 
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.titulo}>
-                    <img
-                        style=
-                        {{ borderRadius: '10px', width: '1000px' }}
-                        src={evento.imagem} />
+        <Link href='/cards'>
+                <Button className={styles.button}>
+               <span>Voltar</span>
+            </Button>
+        </Link>    
 
-                    <div className={styles.subcontainer}>
-                        <h1>{evento.titulo}</h1>
-                        <p>Descrição: <br />
-                            {evento.descricao}</p>
-                        <br />
-                        <p>Data de Inicio: {evento.dataInicio} | <br /> Data de Fim:{evento.dataFim}</p>
-                    </div>
-                </div>
-            </div>
+        <div className={styles.container}>
+        <Image 
+        src={evento.imagem} 
+        width={700} 
+        height={500}
+        />
+        <div className={styles.subcontainer}>
+
+          <h1>{evento.titulo}</h1>
+          <span>{evento.descricao}</span>
+          <p>Data Inicio: {evento.dataInicio} | Data Fim: {evento.dataFim}</p> 
+        </div>
+          
+        </div>
+
 
         </>
     )
