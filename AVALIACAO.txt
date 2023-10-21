@@ -17,3 +17,8 @@ Formulário para alterar um evento /eventos/alterar/ID
 
 Criar todos os componentes:
 -Cabecalho, Rodapé, Card, Lista de Cards, Label, Input, DateTime, Textarea, Button, Mensagem etc...
+
+
+
+comando para executar o server json  
+--json-server --watch database.json --port 3000
