@@ -5,7 +5,8 @@ import Textarea from '@/components/Textarea'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react'
-import Atualizar from '../alterar/[id]';
+
+
 export default function Cadastro() {
 
     const [evento, setEvento] = useState({
@@ -129,6 +130,18 @@ export default function Cadastro() {
                                         })}
                                     />
                                 </div>
+                                <label htmlFor='local'>Local:</label>
+                                <Input
+                                    placeHolder="Ex: Independência dos EUA"
+                                    id='local'
+                                    type='text'
+                                    name='local'
+                                    value={evento.local}
+                                    onChange={e => setEvento({
+                                        ...evento,
+                                        local: e.target.value
+                                        })}
+                                    />
                             </div>
 
                             <div className={styles.button}>

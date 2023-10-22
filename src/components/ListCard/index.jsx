@@ -5,13 +5,14 @@ import styles from './styles.module.css'
 
 export default function ListCard(){
 
-
-  const [evento, SetEvento] = useState([])
+  
+  const [evento, setEvento] = useState([])
   const [eventos, setEventos] = useState([])
 
 
   function handleCardClick(data) {
-    console.log("Dados do Card:", data);i
+    setEvento(data);
+    console.log("Dados do Card:", data);
   }
   useEffect(() =>{
     axios.get('http://localhost:3000/eventos')
@@ -37,8 +38,7 @@ export default function ListCard(){
                     dataFim={formatarData(e.dataFim)} 
                     local={e.local}
                     onClick={() => handleCardClick(e)} 
-                    />
-                  
+                    />          
                   ))
                 
                 }
