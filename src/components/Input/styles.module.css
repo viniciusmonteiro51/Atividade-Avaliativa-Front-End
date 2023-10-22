@@ -12,3 +12,10 @@
 .input:focus-visible{
     outline: 1px solid #2cd4d9;
 }
+
+.errorMessage {
+    color: var(--red);
+    padding-top: .3rem;
+    font-family: var(--fontPrimary);
+  }
+  

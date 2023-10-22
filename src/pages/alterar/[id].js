@@ -11,23 +11,21 @@ import 'react-toastify/dist/ReactToastify.css';
 import ListCard from "@/components/ListCard";
 
 export default function AlterarEvento() {
-    const [evento, setEvento] = useState({});
-    const { handleSubmit, formState: { errors }, control, setValue } = useForm();
-    let router = useRouter();
-    let id = router.query.id;
 
-    useEffect(() => {
-        if (id) {
-            axios.get(`http://localhost:3000/eventos/${id}`)
-                .then(resultado => {
-                    console.log('Dados recebidos:', resultado.data);
-                    setEvento(resultado.data);
-                })
-                .catch(error => {
-                    console.error('Erro ao obter dados:', error);
-                });
+    const [evento, setEvento] = useState('');
+    const { handleSubmit, formState: { errors }, control, setValue } = useForm();
+    const router = useRouter()
+   
+    async function alterarEvento(data) {
+        try {
+            const id = router.query.id
+            
+            const res = await axios.put(`http://localhost:3000/alterar/${id}`, data);
+            console.log('Resposta do servidor:', res.data);
+        } catch (error) {
+            console.error('Erro ao enviar requisição:', error);
         }
-    }, [id]); 
+    }
 
     useEffect(() => {
         if (evento) {
@@ -39,24 +37,6 @@ export default function AlterarEvento() {
             setValue("imagem", evento.imagem);
         }
     }, [evento]);
-
-    async function alterarEvento(data) {
-        try {
-            let objeto = {
-                titulo: data.titulo,
-                descricao: data.descricao,
-                dataInicio: data.dataInicio,
-                dataFim: data.dataFim,
-                local: data.local
-            };
-
-            const res = await axios.patch(`http://localhost:3000/alterar/${id}`, objeto);
-            console.log('Resposta do servidor:', res.data); 
-        } catch (error) {
-            console.error('Erro ao enviar requisição:', error);
-        }
-    }
-
 
     return (
         <>
@@ -83,15 +63,10 @@ export default function AlterarEvento() {
                                         id='titulo'
                                         type='text'
                                         name='titulo'
-                                        value={evento.titulo} 
-                                        
-                                        onChange={e => {
-                                         setEvento({ ...evento, titulo: e.target.value })  
-                                        console.log('Novo valor do campo titulo:', e.target.value);
-
-                                    }}
-                                            
-                                             
+                                        onChange={e => setEvento({
+                                            ...evento,
+                                            titulo: e.target.value
+                                        })}
                                     />
                                 </div>
                                 <div className={styles.inputbox}>
@@ -104,9 +79,11 @@ export default function AlterarEvento() {
                                         cols='27'
                                         rows='3'
                                         name='descricao'
-                                        value={evento.descricao}
-                                        onChange={e => setEvento({ ...evento, descricao: e.target.value })} 
-                                    />
+                                        onChange={e => setEvento({
+                                            ...evento,
+                                            descricao: e.target.value
+                                        })}>
+                                    </Textarea>
                                 </div>
                                 <div className={styles.inputbox}>
                                     <label htmlFor='dataInicio'>Data de Início:</label>
@@ -115,9 +92,10 @@ export default function AlterarEvento() {
                                         errors={errors}
                                         id='dataInicio'
                                         type='date'
-                                        name='dataInicio'
-                                        value={evento.dataInicio} 
-                                        onChange={e => setEvento({ ...evento, dataInicio: e.target.value })} 
+                                        name='dataInicio'                                            onChange={e => setEvento({
+                                            ...evento,
+                                            dataInicio: e.target.value
+                                        })}
                                     />
                                 </div>
                                 <div className={styles.inputbox}>
@@ -128,20 +106,26 @@ export default function AlterarEvento() {
                                         id='dataFim'
                                         type='date'
                                         name='dataFim'
-                                        value={evento.dataFim} 
-                                        onChange={e => setEvento({ ...evento, dataFim: e.target.value })} 
+                                        onChange={e => setEvento({
+                                            ...evento,
+                                            dataFim: e.target.value
+                                        })}
                                     />
                                 </div>
                                 <div>
                                     <label htmlFor='local'>Local:</label>
                                     <Input
+                                        control={control} errors={errors}
                                         placeholder="Ex: Independência dos EUA"
                                         id='local'
                                         type='text'
                                         name='local'
-                                        value={evento.local} 
-                                        onChange={e => setEvento({ ...evento, local: e.target.value })} 
-                                    />
+                                        onChange={e => setEvento({
+                                            ...evento,
+                                            local: e.target.value
+                                            })}
+                                        />
+                                                                                
                                 </div>
                             </div>
                             <div className={styles.button}>

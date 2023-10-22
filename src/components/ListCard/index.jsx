@@ -7,16 +7,10 @@ export default function ListCard(){
 
   
   const [evento, setEvento] = useState([])
-  const [eventos, setEventos] = useState([])
 
-
-  function handleCardClick(data) {
-    setEvento(data);
-    console.log("Dados do Card:", data);
-  }
   useEffect(() =>{
     axios.get('http://localhost:3000/eventos')
-      .then(resultado => setEventos(resultado.data))
+      .then(resultado => setEvento(resultado.data))
   }, [])
 
   function formatarData(data) {
@@ -28,8 +22,9 @@ export default function ListCard(){
         <>  
    
             <div className={styles.listCard}>
-                  {eventos.map(e =>(
+                  {evento.map(e =>(
                     <Card
+                    key={e.id}
                     imagem={e.imagem}
                     id={e.id}
                     titulo={e.titulo}
@@ -37,7 +32,6 @@ export default function ListCard(){
                     dataInicio={formatarData(e.dataInicio)}
                     dataFim={formatarData(e.dataFim)} 
                     local={e.local}
-                    onClick={() => handleCardClick(e)} 
                     />          
                   ))
                 

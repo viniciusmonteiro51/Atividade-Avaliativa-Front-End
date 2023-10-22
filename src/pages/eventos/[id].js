@@ -33,6 +33,9 @@ export default function EventosHome() {
         src={evento.imagem} 
         width={700} 
         height={500}
+        decoding="async"
+        data-nimg="1"
+        alt='imagem'
         />
         <div className={styles.subcontainer}>
 

@@ -4,9 +4,9 @@ import Rodape from '@/components/Rodape'
 import styles from './styles.module.css'
 import Link from 'next/link'
 import { useState } from 'react'
-export default function Cards() {
 
-  const [evento, setEvento] = useState()
+export default function Cards() {
+  
   return (
     <>
     <div className={styles.container}>

@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 import Button from '../Button'
 import { FaRegEdit } from 'react-icons/fa'
 
-export default function Card({ id, imagem, titulo, descricao, dataInicio, dataFim, local, onClick }) {
+export default function Card({ id, imagem, titulo, dataInicio, dataFim, local }) {
 
     return (
         <>
@@ -26,14 +26,6 @@ export default function Card({ id, imagem, titulo, descricao, dataInicio, dataFi
                         </Link>
                         <Link href={`/alterar/${id}`}>
                         <span  
-                        onClick={() => 
-                        onClick({ 
-                            id, 
-                            titulo, 
-                            descricao, 
-                            dataInicio, 
-                            dataFim, 
-                            local })} 
                             className={styles.iconContainer}>
                             <FaRegEdit style={{width:'20px', height:'20px'}}/>
                         </span>
