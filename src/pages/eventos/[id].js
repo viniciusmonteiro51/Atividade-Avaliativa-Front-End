@@ -40,8 +40,9 @@ export default function EventosHome() {
         <div className={styles.subcontainer}>
 
           <h1>{evento.titulo}</h1>
-          <span>{evento.descricao}</span>
-          <p>Data Inicio: {evento.dataInicio} | Data Fim: {evento.dataFim}</p> 
+          <span>{evento.descricao}</span>          
+          <p>Data Inicio: {evento.dataInicio} | Data Fim: {evento.dataFim}</p>
+          <span>{evento.local}</span> 
         </div>
           
         </div>

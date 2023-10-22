@@ -5,7 +5,6 @@ import Textarea from '@/components/Textarea'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react'
-import { useForm } from 'react-hook-form';
 
 
 export default function Cadastro() {
@@ -19,7 +18,6 @@ export default function Cadastro() {
         imagem: ''
     })
 
-    const { handleSubmit, formState: { errors }, control, setValue } = useForm('');
 
     async function inserirEvento(e) {
         e.preventDefault()
@@ -59,7 +57,7 @@ export default function Cadastro() {
 
                     </div>
                     <div className={styles.form}>
-                        <form onSubmit={handleSubmit(inserirEvento())}>
+                        <form onSubmit={inserirEvento}>
                             <div className={styles.formheader}>
                                 <div className={styles.title}>
                                     <h1>Cadastre-se</h1>
@@ -70,8 +68,6 @@ export default function Cadastro() {
                                 <div className={styles.inputbox}>
                                     <label htmlFor='titulo'>Titulo:</label>
                                     <Input
-                                        control={control}
-                                        errors={errors}
                                         placeHolder="Ex: Independência dos EUA"
                                         id='titulo'
                                         type='text'
@@ -86,8 +82,6 @@ export default function Cadastro() {
                                 <div className={styles.inputbox}>
                                     <label htmlFor='descricao'>Descrição:</label>
                                     <Textarea placeHolder="Ex: A Independência dos EUA teve seu inicio em..."
-                                        control={control}
-                                        errors={errors}
                                         id='descricao'
                                         cols='27'
                                         rows='3'
@@ -102,9 +96,8 @@ export default function Cadastro() {
                                 </div>
                                 <div className={styles.inputbox}>
                                     <label htmlFor='dataInicio'>Data de Início:</label>
-                                    <Input
-                                        control={control}
-                                        errors={errors}                                    
+                                    <Input  
+                                        id='dataInicio'                                 
                                         type='date'
                                         name='dataInicio'
                                         value={evento.dataInicio}
@@ -117,8 +110,7 @@ export default function Cadastro() {
                                 <div className={styles.inputbox}>
                                     <label htmlFor='dataFim'>Data de Fim:</label>
                                     <Input
-                                        control={control}
-                                        errors={errors}                                   
+                                        id='dataFim'                                  
                                         type='date'
                                         name='dataFim'
                                         value={evento.dataFim}
@@ -130,9 +122,7 @@ export default function Cadastro() {
                                 </div>
                                 <div className={styles.file}>
                                     <p></p>
-                                    <Input
-                                        control={control}
-                                        errors={errors}                                    
+                                    <Input                                   
                                         className={styles.input}
                                         type={'file'}
                                         id='imagem'
@@ -144,9 +134,7 @@ export default function Cadastro() {
                                     />
                                 </div>
                                 <label htmlFor='local'>Local:</label>
-                                <Input
-                                    control={control}
-                                    errors={errors}                                
+                                <Input                               
                                     placeHolder="Ex: Independência dos EUA"
                                     id='local'
                                     type='text'
