@@ -33,7 +33,7 @@ export default function Cadastro() {
                 imagem: ''
             });
         }
-
+        
         axios.post('http://localhost:3000/eventos', evento)
             .then(resultado => {
                 console.log(resultado.data);
@@ -123,15 +123,19 @@ export default function Cadastro() {
                                 <div className={styles.file}>
                                     <p></p>
                                     <Input                                   
-                                        className={styles.input}
-                                        type={'file'}
-                                        id='imagem'
-                                        value={evento.imagem}
-                                        onChange={(e) => setEvento({
-                                            ...evento,
-                                            imagem: e.target.value
-                                        })}
-                                    />
+                                       className={styles.input}
+                                       type={'file'}
+                                       id='imagem'
+                                       onChange={(e) => {
+                                            const file = e.target.files[0];
+                                            if (file) {
+                                            const filePath = `/${file.name}`;
+                                            setEvento({
+                                           ...evento,
+                                            imagem: filePath
+                                               });
+                                            }}}/>
+
                                 </div>
                                 <label htmlFor='local'>Local:</label>
                                 <Input                               

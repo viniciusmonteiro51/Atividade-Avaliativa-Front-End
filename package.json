@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "backend":"json-server --watch database.json --port 3000",
+    "backend": "json-server --watch database.json --port 3000",
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",

@@ -141,6 +141,23 @@ export default function AlterarEvento() {
                                         onChange={e => setEvento({...evento, local: e.target.value})}/>
 
                                 </div>
+                                <div className={styles.file}>
+                                    <p></p>
+                                    <Input                                   
+                                       className={styles.input}
+                                       type={'file'}
+                                       id='imagem'
+                                       onChange={(e) => {
+                                            const file = e.target.files[0];
+                                            if (file) {
+                                            const filePath = `/${file.name}`;
+                                            setEvento({
+                                           ...evento,
+                                            imagem: filePath
+                                               });
+                                            }}}/>
+
+                                </div>
                             </div>
                             <div className={styles.button}>
                                 <button
